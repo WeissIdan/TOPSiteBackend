@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import userSchema from "./models/user.js";
-import albumSchema from "./models/album.js"
+import userModel from "./models/user.js";
+import albumModel from "./models/album.js"
 
 const connect = async () => {
     try {
@@ -13,6 +13,6 @@ const connect = async () => {
 
 export {
     connect,
-    userSchema as User,
-    albumSchema as Album
+    userModel as User,
+    albumModel as Album
 };

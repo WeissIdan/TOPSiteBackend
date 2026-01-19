@@ -6,5 +6,5 @@ const albumSchema = new mongoose.Schema({
   type: { type: String, enum: ['Studio Album', 'Live Album', 'Special Session'] },
   tracks: [String]
 });
-
-module.exports = mongoose.model('Album', albumSchema);
+const albumModel = mongoose.model("albums",albumSchema)
+export default albumModel;
