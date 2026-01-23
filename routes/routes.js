@@ -1,6 +1,6 @@
 import express from "express";
-import albumRoutes from "./albumRoutes.js";
-import userRoutes from "./userRoutes.js";
+import albumRoutes from "./albumRoute.js";
+import userRoutes from "./userRoute.js";
 
 const router = express.Router();
 

@@ -1,8 +1,8 @@
-import albumModel from "../models/Album.js";
-
+import albumModel from "../mongo/models/album.js";
 // 1. Get all albums (The full list for your homepage)
 export const getAllAlbums = async (req, res) => {
   try {
+    
     const albums = await albumModel.find().sort({ release_year: 1 });
     res.status(200).json(albums);
   } catch (error) {
@@ -29,7 +29,7 @@ export const getAlbumByTitle = async (req, res) => {
 // 3. Get albums by Type (e.g., Only show "Live Album")
 export const getAlbumsByType = async (req, res) => {
   try {
-    const { type } = req.query; // e.g., /albums/filter?type=Live Album
+    const { type } = req.params; 
     const albums = await albumModel.find({ type: type });
     res.status(200).json(albums);
   } catch (error) {

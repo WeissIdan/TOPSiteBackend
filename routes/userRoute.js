@@ -3,10 +3,10 @@ import { signup, login } from "../controllers/userController.js";
 
 const router = express.Router();
 
-// Route for creating a new user account
-router.post("/signup", signup);
-
-// Route for authenticating an existing user
-router.post("/login", login);
+router.post("/register", signup);
+router.post("/login", login); 
+router.get("/user/:id", getUser);
+router.patch("/user/:id", updateUser);
+router.delete("/user/:id", deleteUser);
 
 export default router;

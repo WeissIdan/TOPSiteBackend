@@ -1,12 +1,15 @@
+import "dotenv/config";
 import express from "express";
 import mongoose from "mongoose";
 import router from "./routes/routes.js";
+import { connect } from "./mongo/communicate.js";
 
 const app = express();
 
 app.use(express.json());
 
 // --- Database Connection ---
+connect();
 
 
 // --- The Clean Link ---
